@@ -1,22 +1,24 @@
 import { defineConfig } from 'vitepress';
 
-// refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
+  base: '/linkerx/',
   lang: 'zh-CN',
   title: 'LinkerX',
-  description: 'LinkerX 基于gost的转发面板',
+  description: 'LinkerX 基于 gost 的转发面板',
+  cleanUrls: true,
 
   themeConfig: {
     nav: [
-      { text: '文档', link: '/getting-started' },
-      { text: '使用指南', link: '/guide' },
+      { text: '文档', link: '/getting-started/' },
+      { text: '使用指南', link: '/guide/' },
     ],
 
     sidebar: [
       {
+        text: '指南',
         items: [
-          { text: '文档', link: '/getting-started' },
-          { text: '使用指南', link: '/guide' },
+          { text: '文档', link: '/getting-started/' },
+          { text: '使用指南', link: '/guide/' },
         ],
       },
     ],

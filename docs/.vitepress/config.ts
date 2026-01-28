@@ -5,7 +5,6 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'LinkerX',
   description: 'LinkerX 基于 gost 的转发面板',
-  cleanUrls: true,
 
   themeConfig: {
     nav: [

@@ -110,4 +110,4 @@ http://your-server-ip:8080
     - **Relay授权：** 允许组用户使用 TCP/TLS 协议 relay 使用
     - **直连转发：** 允许组用户使用主机在 **“流量转发”** 里面设置直连端口转发权限
 - **授权转发链：** 允许组用户使用 **管理员** 配置的转发链
-![Group](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/Group.png)
+![Group](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/group.png)

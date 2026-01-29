@@ -57,12 +57,12 @@ http://your-server-ip:8080
   - **汇总颗粒度：** 监控数据的保留时间颗粒度，默认是 1m
   - **汇总循环间隔：** 汇总数据的循环间隔，默认是 10m
   - **数据清洗间隔：** 数据清洗的循环间隔，默认是 24h
-![system](./docs/images/system.png)
+![system](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/system.png)
 # 第三步：服务器管理
 ## 主机管理
 - **添加服务器：** 输入主机的名称、服务器IP、可用端口范围、倍率、ICMP 监控 IP
 - **服务器安装 Agent：** 复制一键安装命令到服务器，执行安装
-![node](./images/node.png)
+![node](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/node.png)
 ## 主机监控
 - **页面会有实时的监控数据展示** 
 - **支持显示时间范围：** 可以自定义查看最近的一段时间内的监控数据
@@ -72,7 +72,7 @@ http://your-server-ip:8080
     - **磁盘监控：** 展示主机的磁盘占用情况
     - **网络带宽：** 展示主机的网络流量情况
     - **ICMP 监控：** 展示主机的 ICMP 监控数据
-![monitor](./docs/images/monitor.png)
+![monitor](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/monitor.png)
 # 第四步：Gost 管理
 - **Service管理：**
     - **设置 GOST 基础信息：** 隧道端口、启用隧道协议、出/入口组设置
@@ -85,7 +85,7 @@ http://your-server-ip:8080
 - **新增转发链：** 输入 Chains 的名称、倍率、配置跳跃点、节点等信息
 - **删除Chains：** 支持批量删除
 - **修改Chains：** 编辑 Chains 的名称、倍率、跳跃点、节点等信息
-![Chains](./docs/images/Chains.png)
+![Chains](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/Chains.png)
 # 第六步：端口转发
 - **新增规则：** 输入端口转发的名称、线路（可以是主机也可以是转发链）、协议（TCP/UDP）、目标 IP、目标端口、负载均衡策略
 - **删除端口转发：** 支持批量删除
@@ -110,4 +110,4 @@ http://your-server-ip:8080
     - **Relay授权：** 允许组用户使用 TCP/TLS 协议 relay 使用
     - **直连转发：** 允许组用户使用主机在 **“流量转发”** 里面设置直连端口转发权限
 - **授权转发链：** 允许组用户使用 **管理员** 配置的转发链
-![Group](./docs/images/Group.png)
+![Group](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/Group.png)

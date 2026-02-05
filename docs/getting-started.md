@@ -14,7 +14,7 @@ LinkerX 是一个基于 gost 的流量转发面板。
 # 演示站
 [演示站点击](https://test.linkerx.org/)
 - 账号：admin
-- 密码：admin
+- 密码：FA97556F-B5D4-4F17-8BF3-5E5A89757AAC
 # 快速开始
 
 帮助你快速开始使用 LinkerX。

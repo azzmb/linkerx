@@ -11,7 +11,8 @@ LinkerX 基于 GOST 的转发面板 [GOST 文档](https://gost.run/zh-cn/docs/) 
     - 其他未知问题
 
 # 功能介绍
-- **不支持协议屏蔽**：不支持屏蔽 HTTP、TLS、SOCKS5 等协议，以后可能也不考虑做，功能待定
+- **支持协议屏蔽**：支持屏蔽 HTTP、TLS、SOCKS5 协议，支持限速限流
+- 支持转发多链负载均衡
 - 转发链、端口转发
 - 支持一键更新 Agent
 - 支持一键安装 GOST

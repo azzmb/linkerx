@@ -85,7 +85,7 @@ http://your-server-ip:8080
 - **新增转发链：** 输入 Chains 的名称、倍率、配置跳跃点、节点等信息
 - **删除Chains：** 支持批量删除
 - **修改Chains：** 编辑 Chains 的名称、倍率、跳跃点、节点等信息
-![Chains](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/Chains.png)
+![Chains](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/chains.png)
 # 第六步：端口转发
 - **新增规则：** 输入端口转发的名称、线路（可以是主机也可以是转发链）、协议（TCP/UDP）、目标 IP、目标端口、负载均衡策略
 - **删除端口转发：** 支持批量删除

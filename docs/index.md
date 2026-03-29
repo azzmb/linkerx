@@ -11,7 +11,7 @@ hero:
       text: 快速开始
       link: /getting-started
     - theme: brand
-      text: 银帕讨论群
+      text: Impart 交流群
       link: https://t.me/Impart_Chat
 features:
   - icon: 📝

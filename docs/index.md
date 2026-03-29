@@ -11,7 +11,8 @@ hero:
       text: 快速开始
       link: /getting-started
     - theme: brand
-      text: 别点了，不开源
+      text: 讨论群
+      link: https://t.me/Impart_Chat
 features:
   - icon: 📝
     title: 特色

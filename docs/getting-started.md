@@ -34,7 +34,8 @@ LinkerX 是一个基于 gost 的流量转发面板。
 ## 一键安装
 ⚠️ 自己安装好 docker 后，再安装 LinkerX
 ```bash
-# 还没有一键安装脚本，等等吧
+# 提前准备好授权
+bash <(curl https://raw.githubusercontent.com/azzmb/linkerx-agent/main/install.sh)
 ```
 ## 端口说明
 | 端口 | 协议 | 说明 | 可配置 |

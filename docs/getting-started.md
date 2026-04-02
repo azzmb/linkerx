@@ -37,6 +37,18 @@ LinkerX 是一个基于 gost 的流量转发面板。
 # 提前准备好授权
 bash <(curl https://raw.githubusercontent.com/azzmb/linkerx-agent/main/install.sh)
 ```
+
+## 卸载 agent
+```bash
+systemctl stop linkerx-agent
+systemctl disable linkerx-agent
+systemctl stop linkerx-gost
+systemctl disable linkerx-gost
+rm -f /etc/systemd/system/linkerx-agent.service /etc/systemd/system/linkerx-gost.service
+systemctl daemon-reload
+rm -rf /etc/linkerx
+```
+
 ## 端口说明
 | 端口 | 协议 | 说明 | 可配置 |
 | --- | --- | --- | --- |

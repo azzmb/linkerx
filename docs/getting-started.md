@@ -34,6 +34,18 @@ LinkerX 是一个基于 gost 的流量转发面板。
 ## 一键安装
 ⚠️ 自己安装好 docker 后，再安装 LinkerX
 ```bash
+# 安装前请确保系统时间准确，建议使用 chrony
+# Debian / Ubuntu
+apt install chrony -y
+
+# CentOS / RHEL
+yum install chrony -y
+
+# 立即强制同步时间
+chronyc makestep
+```
+
+```bash
 # 提前准备好授权
 bash <(curl https://raw.githubusercontent.com/azzmb/linkerx-agent/main/install.sh)
 ```

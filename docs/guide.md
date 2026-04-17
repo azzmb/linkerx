@@ -10,10 +10,11 @@ LinkerX 基于 GOST 的转发面板 [GOST 文档](https://gost.run/zh-cn/docs/) 
     - 其他未知问题
 
 # 功能介绍
-- **支持协议屏蔽**：支持屏蔽 HTTP、TLS、SOCKS5 协议（有限制支持），支持限速限流
+- **支持协议屏蔽**：支持屏蔽（有限制支持） HTTP、TLS、SOCKS5 协议、高熵加密流，支持限速限流
+    - Shadowsocks 这些全加密流量属于高熵加密流
 - 支持转发多链负载均衡
 - 转发链、端口转发
-- 支持一键更新 Agent
+- 支持一键安装、更新、卸载 Agent
 - 支持一键安装 GOST
 - 用户管理
   - 支持添加、删除、修改用户
@@ -27,6 +28,10 @@ LinkerX 基于 GOST 的转发面板 [GOST 文档](https://gost.run/zh-cn/docs/) 
   - 支持监控保留时间，自定义颗粒度
 - 使用需要授权，不开源
 - 面板和 Agent 通信使用 gRPC 协议
+- 支持协议
+    - Handler：Relay、HTTP、Auto
+    - Listener：TCP、TLS、KCP、QUIC、WS、WSS、MWS、MWSS、MTCP、MTLS
+    - 组合方式自行参考 gost 官方文档，或者只用 Relay+TCP、Relay+TLS
 
 # 流量统计介绍
 - **流量统计方式：** 双向流量统计，不支持修改成单向统计
@@ -34,6 +39,14 @@ LinkerX 基于 GOST 的转发面板 [GOST 文档](https://gost.run/zh-cn/docs/) 
 - **管理员创建并分配权限的转发链倍率：** 管理员配置的转发链倍率，可以在设置转发链的时候设置，分配给组用户后按照链的倍率计费
 - **用户自己设置的转发链倍率统计：** 链上各主机倍率叠加计费
 
+# 多入口用途
+- **透传其他面板流量：** 合租流量添加进 LinkerX 管理和组建转发链（车中车可耻）
+    - 例如自己有服务器 A 和 B，A 和 B 需要使用合租流量 C 联通并组建隧道
+    - 在合租流量 C 里面配置一条转发规则到服务器 B 的 GOST Service，（例如：Relay+TCP 服务端口）
+    - 在 LinkerX 上面配置服务器 B 多入口，IP和端口填写 C 的 IP:Port
+    - LinkerX 配置转发链，入口选择A，出口选择B，B选择多入口
+- **IPv6支持：** 用来对服务器的 IPv6 支持
+- **注意事项** LinkerX 开启 GOST Admission，部分操作需要手动添加白名单（隧道准入授权）
 
 # 第一步：登录系统
 安装完成后，打开浏览器访问面板：
@@ -50,6 +63,7 @@ http://your-server-ip:8080
 - **设置证书签发 IP/域名：** 输入面板机器的 IP 地址或域名，用于签发 Agent 证书
 - **证书存放路径：** 输入证书存放的路径，默认是 /opt/LinkerX/certs/monitor-grpc
 - **Agent更新设置** 一般不需要修改
+- **IP连接数设置** 用户连接数限制策略和判断条件
 - **监控数据保留时间：** 
   - **明细保留天数：** 详细监控数据
   - **汇总保留天数：** 超过指定天数的汇总数据
@@ -60,7 +74,7 @@ http://your-server-ip:8080
 # 第三步：服务器管理
 ## 主机管理
 - **添加服务器：** 输入主机的名称、服务器IP、可用端口范围、倍率、ICMP 监控 IP
-- **服务器安装 Agent：** 复制一键安装命令到服务器，执行安装
+- **服务器安装 Agent：** 支持一键安装、卸载、复制安装命令
 ![node](https://raw.githubusercontent.com/azzmb/linkerx/main/docs/images/node.png)
 ## 主机监控
 - **页面会有实时的监控数据展示** 

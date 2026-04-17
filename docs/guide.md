@@ -32,6 +32,7 @@ LinkerX 基于 GOST 的转发面板 [GOST 文档](https://gost.run/zh-cn/docs/) 
     - Handler：Relay、HTTP、Auto
     - Listener：TCP、TLS、KCP、QUIC、WS、WSS、MWS、MWSS、MTCP、MTLS
     - 组合方式自行参考 gost 官方文档，或者只用 Relay+TCP、Relay+TLS
+- 移动端适配
 
 # 流量统计介绍
 - **流量统计方式：** 双向流量统计，不支持修改成单向统计
